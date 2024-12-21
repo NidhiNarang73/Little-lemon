@@ -1,24 +1,54 @@
 // BookingPage.js
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { fetchAPI, submitAPI } from './apiFunctions';
 
 function BookingPage() {
   // State variables to hold form input
   const [date, setDate] = useState('');
+  const [availableTimes, setAvailableTimes] = useState([]);
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState('');
+
+  useEffect(() => {
+    const today = new Date();
+    setDate(today.toISOString().split('T')[0]); // e.g. "2024-01-02"
+
+    const timesForToday = fetchAPI(today);
+    setAvailableTimes(timesForToday);
+  }, []);
+
+  useEffect(() => {
+    if (!date) return; // If date is empty, skip
+    const newDate = new Date(date);
+    const newTimes = fetchAPI(newDate);
+    setAvailableTimes(newTimes);
+
+    // Clear selected time if not in the new list, optional:
+    if (!newTimes.includes(time)) {
+      setTime('');
+    }
+  }, [date]); // triggers when 'date' changes
 
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     // For now, just log the form data
-    console.log('Booking Details:', {
+    const formData = {
       date,
       time,
       guests,
       occasion,
-    });
-    alert('Your table has been booked!');
+    };
+    const success = submitAPI(formData);
+    if (success) {
+      alert('Your table has been booked!');
+      // Reset form or navigate away
+    } else {
+      alert('Error: Could not submit booking.');
+    }
+
+    console.log('Booking Details:', formData);
   };
 
   return (
