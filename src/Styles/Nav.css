@@ -1,40 +1,40 @@
 /* Nav.css */
 
-/* Style the navigation bar */
+/* Nav.css */
+
+/* The navigation bar container */
 nav {
+    background-color: #333; /* dark/charcoal background */
     display: flex;
-    justify-content: center; /* Center the navigation bar horizontally */
+    justify-content: center; /* center the nav links horizontally */
     align-items: center;
-    padding: 10px 20px;
-    background-color: #fff; /* White background */
-    border-bottom: 1px solid #ddd; /* Add a subtle border */
+    padding: 1rem 2rem;      /* top/bottom, left/right padding */
   }
-
-  /* Style the unordered list */
-  nav ul {
-    list-style: none; /* Remove default bullet points */
-    display: flex; /* Display list items in a row */
-    gap: 20px; /* Add spacing between items */
-    margin: 0;
-    padding: 0;
-  }
-
-  /* Style individual list items */
-  nav li {
-    margin: 0;
-    padding: 0;
-  }
-
-  /* Style the links */
+  
+  /* Basic link styles within nav */
   nav a {
-    text-decoration: none; /* Remove underline */
-    color: #000; /* Black text */
-    font-size: 16px;
-    font-weight: bold;
-    transition: color 0.3s ease; /* Smooth hover transition */
+    color: #fff;             /* white text on dark background */
+    text-decoration: none;   /* remove underline by default */
+    margin: 0 1rem;          /* spacing between links */
+    padding: 0.5rem 0.75rem; /* clickable area around the text */
+    font-weight: 500;        /* make them a bit bolder */
+    transition: color 0.2s ease; /* smooth color transition on hover */
   }
-
-  /* Add hover effect for links */
+  
+  /* Hover effect for links */
   nav a:hover {
-    color: #f4b400; /* Highlight color (yellow) */
+    text-decoration: underline; /* typical underline on hover */
+    color: #ccc;                /* slightly lighten text color */
   }
+  
+  /* Optional: responsive wrapping for smaller screens */
+  @media (max-width: 768px) {
+    nav {
+      flex-wrap: wrap;       /* allow links to wrap if needed */
+    }
+  
+    nav a {
+      margin: 0.5rem;        /* slightly adjust spacing on small screens */
+    }
+  }
+  

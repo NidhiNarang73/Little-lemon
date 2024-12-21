@@ -1,5 +1,7 @@
 import '../Styles/Header.css'
 import heroImage from '../Assets/restauranfood.jpg';
+import { Link } from 'react-router-dom';
+
 
 
 function Header() {
@@ -10,7 +12,12 @@ function Header() {
         <h1>Little Lemon</h1>
         <p>Chicago</p>
         <p>Serving fresh and authentic Mediterranean cuisine.</p>
-        <button onClick={() => console.log("Button clicked")}>Book a Table</button>
+        
+        <Link to="/booking" className="cta-button">
+          Book a Table
+        </Link>
+
+
       </div>
 
       <div className='image-content'>
