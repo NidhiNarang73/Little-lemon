@@ -1,3 +1,6 @@
+import '../Styles/Nav.css';
+
+
 function Nav() {
     return (
       <nav>

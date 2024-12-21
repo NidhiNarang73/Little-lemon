@@ -1,0 +1,27 @@
+/* Footer.css */
+
+/* Basic footer styling */
+footer {
+    background-color: #333;  /* dark background */
+    color: #fff;            /* light text */
+    padding: 1rem 2rem;
+    display: flex;          /* horizontally align items */
+    flex-wrap: wrap;        /* allow wrapping on smaller screens */
+    gap: 1rem;              /* space between items */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer p {
+    margin: 0;              /* remove default paragraph margin */
+  }
+
+  footer a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;      /* spacing if you want multiple links inline */
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }

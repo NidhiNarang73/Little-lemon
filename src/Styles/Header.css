@@ -1,0 +1,57 @@
+/* Header.css */
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
+    background-color: #495e57;
+    color: white;
+  }
+
+  /* Text content */
+  .text-content {
+    grid-column: 1 / 2; /* Occupy the first column */
+    padding-left: 20px;
+  }
+
+  .text-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+
+  .text-content p {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+
+  .text-content button {
+    background-color: #f4b400; /* Yellow button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .text-content button:hover {
+    background-color: #e0a800;
+  }
+
+  /* Image content */
+  .image-content {
+    grid-column: 2 / 3; /* Occupy the second column */
+    text-align: center;
+    display: flex; /* Center the image */
+    justify-content: center;
+  }
+
+  .image-content img {
+    max-width: 100%;
+    height: auto;
+    width: 200px;
+    border-radius: 8px;
+    object-fit: contain;
+  }
+

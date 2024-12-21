@@ -1,0 +1,74 @@
+/* Main.css */
+
+/* Give the main area some breathing room */
+main {
+    padding: 2rem;
+    background-color: #fff; /* or any background color you like */
+    color: #000; /* default text color */
+    max-width: 1200px; /* optionally limit width */
+    margin: 0 auto; /* center it horizontally if limiting width */
+  }
+
+  /* Generic styling for sections inside the main */
+  main section {
+    margin-bottom: 2rem;
+  }
+
+  main section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Highlights grid: 3 columns that adapt responsively */
+  .highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .highlights article {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .highlights article img {
+    /* Make images responsive within each article */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+  }
+
+  .highlights article h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+
+  /* Shared style for buttons within main (e.g., “Order Online”) */
+  main button {
+    display: inline-block;
+    background-color: #f4b400;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem; /* some space above */
+  }
+
+  main button:hover {
+    background-color: #e0a800;
+  }
+
+  /* Testimonials styling (optional) */
+  main section[aria-label="Customer Testimonials"] article {
+    background-color: #f2f2f2;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }

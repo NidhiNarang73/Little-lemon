@@ -1,0 +1,40 @@
+/* Nav.css */
+
+/* Style the navigation bar */
+nav {
+    display: flex;
+    justify-content: center; /* Center the navigation bar horizontally */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff; /* White background */
+    border-bottom: 1px solid #ddd; /* Add a subtle border */
+  }
+
+  /* Style the unordered list */
+  nav ul {
+    list-style: none; /* Remove default bullet points */
+    display: flex; /* Display list items in a row */
+    gap: 20px; /* Add spacing between items */
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Style individual list items */
+  nav li {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Style the links */
+  nav a {
+    text-decoration: none; /* Remove underline */
+    color: #000; /* Black text */
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth hover transition */
+  }
+
+  /* Add hover effect for links */
+  nav a:hover {
+    color: #f4b400; /* Highlight color (yellow) */
+  }
